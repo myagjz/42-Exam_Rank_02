@@ -1,58 +1,54 @@
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putnbr(int n)
 {
-	write(1, &c, 1);
+	if (n >= 10)
+		ft_putnbr(n / 10);
+	write (1, &"0123456789"[n % 10], 1);
 }
 
-void	ft_putnbr(int nb)
+int	ft_atoi(char *str)
 {
-	if (nb > 9)
+	int i = 1;
+	int s = 0;
+
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
+		str++;
+	if (*str  == '-')
 	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
+		i *= -1;
 	}
-	else
-		ft_putchar(nb + 48);
-}
-
-int		ft_atoi(char *str)
-{
-	int i;
-	int result;
-
-	i = 0;
-	result = 0;
-	while (str[i] != '\0')
+	if (*str == '-' || *str == '+')
+		str++;
+	while (*str >= '0' && *str <= '9')
 	{
-		result *= 10;
-		result += str[i] - 48;
-		i++;
+		s = s * 10 + *str - '0';
+		str++;
 	}
-	return (result);
+	return (s * i);
 }
 
-int		main(int ac, char **av)
+int	main(int ac, char **av)
 {
 	int i;
 	int nb;
 
-	i = 1;
+	i= 1;
 	if (ac == 2)
 	{
 		nb = ft_atoi(av[1]);
 		while (i <= 9)
 		{
 			ft_putnbr(i);
-			write(1, " x ", 3);
+			write (1, " x ", 3);
 			ft_putnbr(nb);
-			write(1, " = ", 3);
+			write (1, " = ", 3);
 			ft_putnbr(nb * i);
 			if (i < 9)
-				write(1, "\n", 1);
+				write (1, "\n", 1);
 			i++;
 		}
 	}
-	write(1, "\n", 1);
+	write (1, "\n", 1);
 	return (0);
 }

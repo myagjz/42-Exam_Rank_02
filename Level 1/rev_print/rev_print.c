@@ -13,3 +13,4 @@ char	*rev_print(char *str)
 	}
 	return (str);
 }
+/* this question has been updated and now asks us to do it as a function rather than a program. */

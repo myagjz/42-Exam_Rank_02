@@ -33,6 +33,7 @@ There is no Norminette in this exam.
 ### Question 2 is from Level 2
 ```
   - alpha_mirror
+  - camel_to_snake
   - do_op
   - ft_atoi
   - ft_strcmp
@@ -44,6 +45,7 @@ There is no Norminette in this exam.
   - max
   - print_bits
   - reverse_bits
+  - snake_to_camel
   - swap_bits
   - union
   - wdmatch 

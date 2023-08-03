@@ -124,15 +124,3 @@ When you are ready to sumbit your function/program, go into Rendu and push the f
 4. After you git push, type `grademe` in the examshell for your project to be submitted. 
 
 <br>
-
-# Exam IDE
-
-You should be able to use both VSCode and Vim in the exam.
-
-[![My Skills](https://skillicons.dev/icons?i=vscode,vim)](https://skillicons.dev)
-
-<br>
-
-# Exam Practice
-
-Practice the exam just like you would in the real exam using this tool - https://github.com/JCluzet/42_EXAM

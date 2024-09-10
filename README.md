@@ -10,7 +10,6 @@ If you fail the exam, when you retake the exam next time, you will restart at Le
 There is no Norminette in this exam. 
 
 <br>
-
 # Exam Questions
 
 ### Question 1 is from Level 1
